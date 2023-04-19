@@ -201,20 +201,4 @@
             return esValido;
           }
 
-          //Agregar links a botones del footer
-          const facebook = document.getElementById("facebook");
-          facebook.addEventListener("click", function() {
-            window.location.href = "https://www.facebook.com";
-          });
-
-          const twitter = document.getElementById("twitter");
-          twitter.addEventListener("click", function() {
-            window.location.href = "https://www.twitter.com";
-          });
-
-          const instagram = document.getElementById("instagram");
-          instagram.addEventListener("click", function() {
-            window.location.href = "https://www.instagram.com";
-          });
-
         });       
