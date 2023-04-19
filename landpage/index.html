@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles.css">       
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.6.0/validator.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+        <script src="formulario.js"></script>
+        <title>Software Design</title>
+    </head> 
+
+    <body>
+
+      <section id="motivacion">
+        <div class="presentacion">
+          <div class="row">
+            <div class="portada-image">
+              <div>
+                <img src="images\portada.png" alt="Imagen de la empresa" class="image-portada">
+                <div class="portada-text">
+                  <h2>Empieza a crecer</h2>
+                  <p>Incrementa las ventas de tu emprendimiento creando el software que necesitan tus clientes</p>
+                  <p>Mejora tu servicio exponencialmente</p>
+                  <div class="botones">
+                    <button onclick="document.getElementById('formulario-cotizacion').scrollIntoView();" class="boton-blanco">Solicita un presupuesto</button>
+                    <button onclick="document.getElementById('formulario-contacto').scrollIntoView();" class="boton-transparente">Contacta con nosotros</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+             
+      <div class="testimonio">
+        <div>
+          <div class="testimonio-container">
+            <img src="images\avatar1.png">
+            <div class="testimonio-content">
+              <h3>Marcos Vega</h3>
+              <h4>"GlobalNet Services"</h4>
+              <p>"No podía creer lo fácil que fue trabajar con esta empresa para crear mi sitio web. El equipo fue muy profesional y atento a mis necesidades. ¡Lo recomendaría sin duda!"</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="testimonio-container">
+            <img src="images\avatar2.png">
+            <div class="testimonio-content">
+              <h3>Luisa Flores</h3>
+              <h4>"Innovatech Solutions"</h4>
+              <p>"He trabajado con muchas empresas de diseño web en el pasado, pero ninguna ha sido tan eficiente y efectiva como esta. Su atención al detalle y habilidad para crear un sitio web que refleja mi marca es simplemente increíble".</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="testimonio-container">
+            <img src="images\avatar3.png">
+            <div class="testimonio-content">
+              <h3>Ana Belén Rojas</h3>
+              <h4>"NextGen Consulting"</h4>
+              <p>"No tengo nada más que elogios para esta empresa. Desde el servicio al cliente hasta la calidad del diseño web, todo ha sido excepcional. ¡Gracias por hacer que mi sitio web sea el mejor de mi industria!"</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="testimonio-container">
+            <img src="images\avatar4.png">
+            <div class="testimonio-content">
+              <h3>Ricardo Hernández</h3>
+              <h4>"QuantumTech Inc"</h4>
+              <p>"¡Gracias por hacer que mi sitio web sea el mejor de mi industria!"</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="testimonio-container">
+            <img src="images\avatar5.png">
+            <div class="testimonio-content">
+              <h3>Juan Carlos Pérez</h3>
+              <h4>"Elite Partners"</h4>
+              <p>"Estoy muy agradecido por el trabajo que hizo esta empresa en mi sitio web. No solo es visualmente impresionante, sino que también es fácil de navegar y ha mejorado significativamente mi presencia en línea".</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="testimonio-container">
+            <img src="images\avatar6.png">
+            <div class="testimonio-content">
+              <h3>Sofía Ortiz</h3>
+              <h4>"Apex Strategies"</h4>
+              <p>"Si estás buscando una empresa que se preocupe por tu éxito en línea, esta es la indicada. Desde el primer contacto hasta la entrega final, el equipo ha sido excepcionalmente profesional y servicial".</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="testimonio-container">
+            <img src="images\avatar7.png">
+            <div class="testimonio-content">
+              <h3>Verónica García</h3>
+              <h4>"TechTonic Innovations"</h4>
+              <p>"Me encantó trabajar con esta empresa. Me guiaron a través de todo el proceso y se aseguraron de que el diseño del sitio web cumpliera con todas mis expectativas. ¡Definitivamente los recomendaría a cualquiera!"</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="testimonio-container">
+            <img src="images\avatar8.png">
+            <div class="testimonio-content">
+              <h3>Diego Sánchez</h3>
+              <h4>"Proxima Venture Group"</h4>
+              <p>"La calidad del trabajo que esta empresa produce es simplemente sorprendente. Me encantó trabajar con ellos y definitivamente los recomendaría a cualquier persona que necesite servicios de diseño web".</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="testimonio-container">
+            <img src="images\avatar9.png">
+            <div class="testimonio-content">
+              <h3>Andrea Morales</h3>
+              <h4>"FutureForward Enterprises"</h4>
+              <p>"Esta empresa realmente se tomó el tiempo para entender mi negocio y crear un sitio web que realmente represente lo que hago. Estoy muy impresionado con el resultado final y lo recomendaría sin dudarlo".</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="testimonio-container">
+            <img src="images\messi.png">
+            <div class="testimonio-content">
+              <h3>Lionel Messi</h3>
+              <h4>"Campeón del mundo"</h4>
+              <p>"Cuarenta y cinco días sin ver a nuestra familia. Dibu fue papá y no pudo ver a su hija, no le pudo hace upa. Estamos a un pasito nomás y depende de nosotros ganar esta Copa. Vamos a salir y vamos a ganar para llevarla con nuestras familias, amigos, la gente que siempre nos bancó.</p>
+            </div>
+          </div>
+        </div>
+      </div>        
+      
+      <section id="experiencia">
+        <div class="tecnologias">
+          <div class="experiencia-container">
+            <img src="images\experiencia.png" alt="Imagen de la empresa" class="image-experiencia">
+            <div class="experiencia-text">
+              <h2>Nuestra experiencia</h2>
+              <p>Contamos con un equipo de 50 especialistas para poder brindar lo mejor de nosotros a cada proyecto</p>
+              <br>
+              <ul>
+                <li><strong>Lenguajes de programación:</strong> Java, Python, Ruby, C#, C++, Swift, Kotlin</li>
+                <br>
+                <li><strong>Tecnologías web:</strong> HTML5, CSS, JavaScript, jQuery, AngularJS, ReactJS, VueJS, Node.js</li>
+                <br>
+                <li><strong>Gestión de bases de datos:</strong> SQL, MySQL, PostgreSQL, MongoDB, Firebase, Cassandra</li>
+                <br>
+                <li><strong>Frameworks de desarrollo web:</strong> Ruby on Rails, Django, Flask, Spring, Express</li>
+                <br>
+                <li><strong>Cloud Computing:</strong> Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP)</li>
+                <br>
+                <li><strong>Herramientas de control de versiones:</strong> Git, Subversion (SVN)</li>
+                <br>
+                <li><strong>Automatización de pruebas:</strong> Selenium, Cucumber, JUnit</li>
+                <br>
+                <li><strong>Herramientas de integración y entrega continua (CI/CD):</strong> Jenkins, CircleCI, TravisCI</li>
+                <br>
+                <li><strong>Seguridad informática:</strong> OWASP, PCI DSS, ISO 27001</li>
+                <br>
+                <li><strong>Análisis de datos:</strong> Big Data, Hadoop, Spark, TensorFlow, Tableau, Power BI</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+       
+
+      <section class="container">
+        <div class="form-row">
+          <div class="form-container">
+            <p>Si necesitas un asesor para poder aclarar tus dudas con respecto al servicio que necesitas</p>                    
+          <h2>Contactanos</h2>
+          <form class="contacto" id="formulario-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombreContacto" name="nombre" required>
+            <span class="error" id="error-nombreContacto"></span>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="emailContacto" name="email" required>
+            <span class="error" id="error-emailContacto"></span>
+            <br>
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asuntoContacto" name="asunto" required>
+            <span class="error" id="error-asuntoContacto"></span>
+            <br>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensajeContacto" name="mensaje" required></textarea>
+            <span class="error" id="error-mensajeContacto"></span>
+            <br>
+            <div class="form-buttons">
+              <button type="button" id="enviarButtonContacto" class="enviarButtonContacto">Enviar</button>
+              <button type="button" id="limpiarButton" class="limpiarButton">Limpiar</button>
+            </div>
+          </form>
+          
+          </div>
+          <div class="form-container">
+            <p>Si necesitás la información ahora, podes solicitar una:</p> 
+          <h2>Cotización inmediata</h2>
+          <form class="cotizacion" id="formulario-cotizacion">
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombreCotizacion" name="nombre" required>
+              <span class="error" id="error-nombreCotizacion"></span>
+            </div>
+            <div class="form-group">
+              <label for="apellido">Apellido:</label>
+              <input type="text" id="apellidoCotizacion" name="apellido" required>
+              <span class="error" id="error-apellidoCotizacion"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="emailCotizacion" name="email" required>
+              <span class="error" id="error-emailCotizacion"></span>
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono:</label>
+              <input type="tel" id="telefonoCotizacion" name="telefono" required>
+              <span class="error" id="error-telefonoCotizacion"></span>
+            </div>
+            <div>
+              <label for="servicios">Servicios:</label>
+              <select name="servicio" id="servicios">
+                <option value=0>- Seleccionar un servicio -</option>
+                <option value=1>Desarrollo de aplicaciones móviles</option>
+                <option value=2>Desarrollo de aplicaciones web</option>
+                <option value=3>Desarrollo de software personalizado</option>
+                <option value=4>Desarrollo de software de gestión empresarial</option>
+                <option value=5>Consultoría en TI</option>
+                <option value=6>Pruebas de software y control de calidad </option>
+                <option value=7>Seguridad de la información </option>
+                <option value=8>Integración de sistemas</option>
+                <option value=9>Análisis de datos y BI</option>
+                <option value=10>Soporte y mantenimiento de software</option>
+              </select>
+            </div>                                              
+            <div class="form-buttons">
+              <button type="button" id="enviarButtonCotizacion" class="enviarButtonCotizacion">Enviar</button>
+            </div>
+          </form>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+          <div class="row-footer">
+            <div class="column-contacto">
+              <h3>Contacto</h3>
+              <ul>
+                <li>Dirección: Mendoza</li>
+                <li>Teléfono: (123) 456-7890</li>
+                <li emailto="contacto@softwaredesign.com">Email: contacto@softwaredesign.com</li>
+              </ul>
+            </div>
+            <div class="column-redes">
+              <h3>Redes Sociales</h3>
+              <ul>
+                <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                <li></li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+              </ul>
+            </div>
+            <div class="column-navegacion">
+              <h3>Navegación</h3>
+              <ul>
+                <li><a href="#motivacion">Inicio</a></li>
+                <li><a href="#experiencia">Servicios</a></li>
+                <li><a href="#motivacion">Acerca de</a></li>
+                <li><a href="#formulario-contacto">Contacto</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row-footer-derechos">
+              <div class="column-derechos">
+                <p>© 2023 Software Design. Todos los derechos reservados.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>    
+
+    </body>
+</html>
