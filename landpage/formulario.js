@@ -165,17 +165,26 @@
           const doc = new jsPDF();
 
           const fechaActual = new Date().toLocaleDateString();
+          
+          const margenIzquierdo = 25;
+          const margenDerecho = 185;
+          const anchoTexto = margenDerecho - margenIzquierdo;
 
-          doc.text(`Fecha: ${fechaActual}`, 25, 10);
-          doc.text(`Nombre: ${nombre} ${apellido}`, 25, 20);
-          doc.text(`Email: ${email}`, 25, 30);
-          doc.text(`Teléfono: ${telefono}`, 25, 40);
-          doc.text(`Nombre del Servicio: ${nombreServicio}`, 25, 50);
-          doc.text(`Descripción del Servicio: ${descripcionServicio}`, 25, 60);
-          doc.text(`Precio Estimado: ${precioEstimado}`, 25, 70);
-          doc.text(`Aclaración: El precio está sujeto a variaciones por lo que es sólo válido por el día de la fecha, este documento no es válido como comprobante`, 25, 80);
+          doc.text(`Fecha: ${fechaActual}`, margenIzquierdo, 10);
+          doc.text(`Nombre: ${nombre} ${apellido}`, margenIzquierdo, 20);
+          doc.text(`Email: ${email}`, margenIzquierdo, 30);
+          doc.text(`Teléfono: ${telefono}`, margenIzquierdo, 40);
+          doc.text(`Nombre del Servicio: ${nombreServicio}`, margenIzquierdo, 50);
+
+          const descripcionServicioLines = doc.splitTextToSize(`Descripción del Servicio: ${descripcionServicio}`, anchoTexto);
+          doc.text(descripcionServicioLines, margenIzquierdo, 60);
+
+          doc.text(`Precio Estimado: ${precioEstimado}`, margenIzquierdo, 90);
+          const aclaracionServicios = doc.splitTextToSize(`Aclaración: El precio está sujeto a variaciones por lo que es sólo válido por el día de la fecha, este documento no es válido como comprobante`, anchoTexto);
+          doc.text(aclaracionServicios, margenIzquierdo, 100);
 
           doc.save("Cotización.pdf");
+
           }  
 
           function validarCampos(campos) {
